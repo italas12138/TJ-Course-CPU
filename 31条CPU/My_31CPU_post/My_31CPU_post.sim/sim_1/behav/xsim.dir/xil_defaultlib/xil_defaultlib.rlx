@@ -1,0 +1,16 @@
+0.4
+2016.2
+D:/My_31CPU_post/My_31CPU_post.sim/sim_1/behav/glbl.v,1464879896,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sim_1/new/cpu_tb.v,1686010329,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v,1685993354,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/new/ALU.v,1685993251,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/new/CPU.v,1685993174,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/new/Controler.v,1685993273,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/new/DMEM.v,1685993164,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/new/Decoder.v,1685993261,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/new/Divider.v,1686010603,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/new/IMEM.v,1685993153,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/new/PC.v,1685993296,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/new/regfile.v,1685993285,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/new/sccomp_dataflow.v,1686010408,verilog,,,,,,,,,,,
+D:/My_31CPU_post/My_31CPU_post.srcs/sources_1/new/seg7x16.v,1685994406,verilog,,,,,,,,,,,

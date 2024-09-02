@@ -1,0 +1,108 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Dec 01 19:53:58 2023
+# Process ID: 2336
+# Current directory: D:/Pipeline_CPU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15572 D:\Pipeline_CPU\Pipeline_CPU.xpr
+# Log file: D:/Pipeline_CPU/vivado.log
+# Journal file: D:/Pipeline_CPU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Pipeline_CPU/Pipeline_CPU.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2016.2/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 01 19:54:20 2023...
+e_compile_order -fileset sources_1
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name dist_mem_gen_0
+set_property -dict [list CONFIG.depth {2048} CONFIG.data_width {32} CONFIG.memory_type {rom} CONFIG.coefficient_file {D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.sim/sim_1/behav/SCPU.coe}] [get_ips dist_mem_gen_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.sim/sim_1/behav/SCPU.coe' provided. It will be converted relative to IP Instance files '../../../../../桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.sim/sim_1/behav/SCPU.coe'
+generate_target {instantiation_template} [get_files d:/Pipeline_CPU/Pipeline_CPU.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'dist_mem_gen_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  d:/Pipeline_CPU/Pipeline_CPU.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'dist_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'dist_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'dist_mem_gen_0'...
+export_ip_user_files -of_objects [get_files d:/Pipeline_CPU/Pipeline_CPU.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci] -no_script -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/Pipeline_CPU/Pipeline_CPU.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci]
+launch_run -jobs 2 dist_mem_gen_0_synth_1
+[Fri Dec 01 20:14:24 2023] Launched dist_mem_gen_0_synth_1...
+Run output will be captured here: D:/Pipeline_CPU/Pipeline_CPU.runs/dist_mem_gen_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/Pipeline_CPU/Pipeline_CPU.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci] -directory D:/Pipeline_CPU/Pipeline_CPU.ip_user_files/sim_scripts -ip_user_files_dir D:/Pipeline_CPU/Pipeline_CPU.ip_user_files -ipstatic_source_dir D:/Pipeline_CPU/Pipeline_CPU.ip_user_files/ipstatic -force -quiet
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'pcpu_onboard' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported 'D:/Pipeline_CPU/Pipeline_CPU.sim/sim_1/behav/SCPU.coe'
+INFO: [USF-XSim-25] Exported 'D:/Pipeline_CPU/Pipeline_CPU.sim/sim_1/behav/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Pipeline_CPU/Pipeline_CPU.sim/sim_1/behav'
+"xvlog -m64 --relax -prj pcpu_onboard_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cla4
+INFO: [VRFC 10-311] analyzing module add1
+INFO: [VRFC 10-311] analyzing module add4
+INFO: [VRFC 10-311] analyzing module add16
+INFO: [VRFC 10-311] analyzing module add32
+INFO: [VRFC 10-311] analyzing module neg32
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/luislt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module luislt
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/Pipe_ID_EXE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipe_ID_EXE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/dmem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/Pipe_MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipe_MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/Pipe_EXE_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipe_EXE_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/conflict.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conflict
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/Pipe_IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipe_IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/seg7x16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg7x16
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/pcpu_onboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcpu_onboard
+INFO: [VRFC 10-311] analyzing module regfile_board
+INFO: [VRFC 10-311] analyzing module pcpu_board
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Pipeline_CPU/Pipeline_CPU.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Pipeline_CPU/Pipeline_CPU.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 1c08ec7bf79e481b96c53d1be49cd4e0 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot pcpu_onboard_behav xil_defaultlib.pcpu_onboard xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-1047] module instantiation should have an instance name [D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/pcpu_onboard.v:65]
+ERROR: [VRFC 10-2063] Module <imem> not found while processing module instance <imem> [D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/pcpu_onboard.v:73]
+ERROR: [VRFC 10-2063] Module <pcpu_board> not found while processing module instance <sccpu> [D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/pcpu_onboard.v:74]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Pipeline_CPU/Pipeline_CPU.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Pipeline_CPU/Pipeline_CPU.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+remove_files -fileset dist_mem_gen_0 d:/Pipeline_CPU/Pipeline_CPU.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
+INFO: [Project 1-386] Moving file 'd:/Pipeline_CPU/Pipeline_CPU.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci' from fileset 'dist_mem_gen_0' to fileset 'sources_1'.
+file delete -force D:/Pipeline_CPU/Pipeline_CPU.ip_user_files/ip/dist_mem_gen_0 D:/Pipeline_CPU/Pipeline_CPU.ip_user_files/sim_scripts/dist_mem_gen_0
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 01 20:19:18 2023...

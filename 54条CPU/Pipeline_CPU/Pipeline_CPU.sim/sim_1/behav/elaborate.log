@@ -1,0 +1,9 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 1c08ec7bf79e481b96c53d1be49cd4e0 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot pcpu_onboard_behav xil_defaultlib.pcpu_onboard xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-1047] module instantiation should have an instance name [D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/pcpu_onboard.v:65]
+ERROR: [VRFC 10-2063] Module <imem> not found while processing module instance <imem> [D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/pcpu_onboard.v:73]
+ERROR: [VRFC 10-2063] Module <pcpu_board> not found while processing module instance <sccpu> [D:/桌面资料/MipsPCPU-main/Project/Static_Pipeline_CPU.srcs/sources_1/new/pcpu_onboard.v:74]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
